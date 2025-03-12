@@ -20,6 +20,27 @@ from src.tools.toolkits import (
     tools_with_side_effects,
 )
 
+'''
+** Here add your path to new tools 
+
+from src.tools_Adversarial.toolkits import (
+    calendar_toolkit,
+    email_toolkit,
+    analytics_toolkit,
+    project_management_toolkit,
+    customer_relationship_manager_toolkit,
+    company_directory_toolkit,
+    tools_with_side_effects,
+)
+'''
+
+
+
+
+'''
+** Select the LLM for test. 
+
+'''
 
 DOMAINS = [calendar, email, analytics, project_management, customer_relationship_manager]
 AVAILABLE_LLMS = [
@@ -759,6 +780,14 @@ def generate_results(queries_path, model_name, tool_selection="all", num_retrys=
     domain = queries_path.split("/")[-1].split(".")[0].replace("_queries_and_answers", "")
     save_dir = os.path.join("data", "results", domain)
     os.makedirs(save_dir, exist_ok=True)
+
+    '''
+    ** Here add your result path to new tools.
+
+    save_path = os.path.join(save_dir, model_name + "_" + tool_selection_adversarial + "_" + current_datetime + ".csv")
+
+
+    '''
 
     # Removes microseconds and makes it more readable
     current_datetime = str(pd.Timestamp.now()).split(".")[0].replace(" ", "_").replace(":", "-")
