@@ -3,7 +3,7 @@ from langchain.tools import tool
 
 # Data is hard-coded so that the agent can call them without passing the dataframe as an argument.
 # We cannot use a class because LangChain does not support tools inside classes.
-PROJECT_TASKS = pd.read_csv("data/processed/project_tasks.csv", dtype=str)
+PROJECT_TASKS = pd.read_csv("/data/sxs7285/Porjects_code/WorkBench-test-/data/processed/project_tasks.csv", dtype=str)
 
 
 def reset_state():

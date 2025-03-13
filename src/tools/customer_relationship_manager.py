@@ -1,7 +1,7 @@
 import pandas as pd
 from langchain.tools import tool
 
-CRM_DATA = pd.read_csv("data/processed/customer_relationship_manager_data.csv", dtype=str)
+CRM_DATA = pd.read_csv("/data/sxs7285/Porjects_code/WorkBench-test-/data/processed/customer_relationship_manager_data.csv", dtype=str)
 
 
 def reset_state():

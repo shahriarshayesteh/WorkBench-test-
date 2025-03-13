@@ -5,7 +5,7 @@ from src.data_generation.data_generation_utils import HARDCODED_CURRENT_TIME
 
 # Data is hard-coded so that the agent can call them without passing the dataframe as an argument.
 # We cannot use a class because LangChain does not support tools inside classes.
-EMAILS = pd.read_csv("data/processed/emails.csv", dtype=str)
+EMAILS = pd.read_csv("/data/sxs7285/Porjects_code/WorkBench-test-/data/processed/emails.csv", dtype=str)
 
 
 def reset_state():

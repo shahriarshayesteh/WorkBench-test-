@@ -1,7 +1,7 @@
 import pandas as pd
 from langchain.tools import tool
 
-ANALYTICS_DATA = pd.read_csv("data/processed/analytics_data.csv", dtype=str)
+ANALYTICS_DATA = pd.read_csv("/data/sxs7285/Porjects_code/WorkBench-test-/data/processed/analytics_data.csv", dtype=str)
 ANALYTICS_DATA["user_engaged"] = ANALYTICS_DATA["user_engaged"] == "True"  # Convert to boolean
 PLOTS_DATA = pd.DataFrame(columns=["file_path"])
 METRICS = ["total_visits", "session_duration_seconds", "user_engaged"]

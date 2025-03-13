@@ -1,7 +1,7 @@
 import pandas as pd
 from langchain.tools import tool
 
-EMAILS = pd.read_csv("data/raw/email_addresses.csv", header=None, names=["email_address"])
+EMAILS = pd.read_csv("/data/sxs7285/Porjects_code/WorkBench-test-/data/raw/email_addresses.csv", header=None, names=["email_address"])
 
 
 @tool("company_directory.find_email_address", return_direct=False)
