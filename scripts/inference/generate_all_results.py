@@ -27,11 +27,6 @@ if __name__ == "__main__":
                 generate_results(query_path, model, tool_selection)
 
 
-# touch openai_key.txt && echo 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 > openai_key.txt
 
 
 
-
-
-
-# touch anyscale_key.txt && echo QZ7bA4AKkX3QXUedjcu5CKHnLcAdL5wr > anyscale_key.txt
