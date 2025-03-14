@@ -42,6 +42,8 @@ args = parser.parse_args()
 
 if __name__ == "__main__":
     ground_truth = pd.read_csv(args.queries_path)
+    ground_truth = ground_truth.iloc[109:112].reset_index(drop=True)
+    print(ground_truth)
     ground_truth["answer"] = ground_truth["answer"].apply(ast.literal_eval)
     results = generate_results(args.queries_path, args.model_name, args.tool_selection)
     calculate_metrics(ground_truth, results)

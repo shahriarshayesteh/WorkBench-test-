@@ -45,10 +45,10 @@ from src.tools_Adversarial.toolkits import (
 DOMAINS = [calendar, email, analytics, project_management, customer_relationship_manager]
 AVAILABLE_LLMS = [
     "gpt-4",
-    "gpt-3.5",
-    "claude-2",
-    "llama2-70b",
-    "mistral-8x7B",
+    # "gpt-3.5",
+    # "claude-2",
+    # "llama2-70b",
+    # "mistral-8x7B",
 ]
 
 
@@ -791,7 +791,9 @@ def generate_results(queries_path, model_name, tool_selection="all", num_retrys=
 
     # Removes microseconds and makes it more readable
     current_datetime = str(pd.Timestamp.now()).split(".")[0].replace(" ", "_").replace(":", "-")
-    save_path = os.path.join(save_dir, model_name + "_" + tool_selection + "_" + current_datetime + ".csv")
+    # save_path = os.path.join(save_dir, model_name + "_" + tool_selection + "_" + current_datetime + ".csv")
+    save_path = os.path.join(save_dir, model_name + "_" + tool_selection+"_adversarial" + "_" + current_datetime + ".csv")
+
     results.to_csv(save_path, index=False, quoting=csv.QUOTE_ALL)
     return results
 
