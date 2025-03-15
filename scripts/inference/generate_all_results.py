@@ -25,8 +25,3 @@ if __name__ == "__main__":
         for model in models:
             for query_path in query_paths:
                 generate_results(query_path, model, tool_selection)
-
-
-
-
-
